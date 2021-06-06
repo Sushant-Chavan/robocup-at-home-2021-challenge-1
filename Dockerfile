@@ -2,7 +2,7 @@ FROM ros:melodic-perception
 
 SHELL [ "/bin/bash", "-c" ]
 
-# install depending packages (install moveit! algorithms on the workspace side, since moveit-commander loads it from the workspace)
+# install depending packages (install moveit! algorithms on the workspace side, since moveit-commander loads it from the workspace) 
 RUN apt-get update && \
     apt-get install -y git ros-$ROS_DISTRO-moveit ros-$ROS_DISTRO-moveit-commander ros-$ROS_DISTRO-move-base-msgs ros-$ROS_DISTRO-ros-numpy ros-$ROS_DISTRO-geometry && \
     apt-get clean
